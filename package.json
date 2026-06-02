@@ -1,0 +1,34 @@
+{
+  "name": "global-report-flex",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy:vercel": "vercel --prod",
+    "deploy:cf": "npm run build:cf && wrangler pages deploy .vercel/output/static",
+    "deploy:railway": "railway up",
+    "refresh": "npx ts-node scripts/manual-refresh.ts",
+    "build:cf": "npx @cloudflare/next-on-pages",
+    "preview:cf": "npm run build:cf && wrangler pages dev .vercel/output/static"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@upstash/redis": "^1.31.0",
+    "next": "14.2.30",
+    "nodemailer": "^6.9.0",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
+    "@cloudflare/workers-types": "^4.20240614.0",
+    "@types/node": "^20",
+    "@types/nodemailer": "^6.4.0",
+    "@types/react": "^18",
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "wrangler": "^3.0.0"
+  }
+}

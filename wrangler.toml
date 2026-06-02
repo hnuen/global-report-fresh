@@ -1,0 +1,13 @@
+name = "global-report-fresh"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[vars]
+# Non-sensitive vars can go here
+# Sensitive vars go in Cloudflare Pages dashboard → Settings → Environment Variables
+
+# KV namespace for briefing cache (create in CF dashboard)
+# [[kv_namespaces]]
+# binding = "BRIEFING_KV"
+# id = "YOUR_KV_NAMESPACE_ID"
